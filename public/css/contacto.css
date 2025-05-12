@@ -1,0 +1,198 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cantora One', sans-serif;
+    line-height: 1.6;
+    color: #215029;
+    background-color: #fff;
+}
+
+.contact-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Contact title styles */
+.contact-title {
+    font-family: 'Chewy', cursive;
+    color: #215029;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    font-weight: normal;
+}
+
+/* Form section styles */
+.form-section {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 70px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-title {
+    font-family: 'Chewy', cursive;
+    color: #215029;
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.form-description {
+    text-align: center;
+    color: #215029;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* Form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #215029;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 14px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    font-family: 'Cantora One', sans-serif;
+    background-color: #f9f9f9;
+    resize: none;
+}
+
+.submit-button {
+    background-color: #215029;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Cantora One', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    width: auto;
+    min-width: 200px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #183d1f;
+}
+
+/* Information section styles */
+.info-section {
+    margin-top: 40px;
+    background: linear-gradient(to bottom, #fffff8 0%, #fffdd0 100%);
+    padding: 0 20px 50px 20px;
+    border-radius: 15px;
+}
+
+.info-section-title {
+    font-family: 'Chewy', cursive;
+    color: #215029;
+    text-align: center;
+    font-size: 34px;
+    padding: 24px 0;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.info-card-title {
+    font-family: 'Chewy', cursive;
+    color: #215029;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.info-card-text {
+    color: #215029;
+    font-size: 16px;
+}
+
+.info-card-text a {
+    color: #215029;
+    text-decoration: none;
+}
+
+.info-card-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-section {
+        padding: 30px 20px;
+    }
+    
+    .contact-title {
+        font-size: 36px;
+    }
+    
+    .form-title,
+    .info-section-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .form-title,
+    .info-section-title {
+        font-size: 24px;
+    }
+    
+    .submit-button {
+        width: 100%;
+    }
+}
