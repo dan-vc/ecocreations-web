@@ -42,6 +42,21 @@
     @yield('content')
 
     <footer>
+        <section id="footer-cta">
+            <article class="container">
+                <form action="#" method="POST" class="subscribe-form">
+                    @csrf
+                    <section class="input-group">
+                        <img src="icons/envelope.svg" alt="">
+                        <input type="text" name="search" placeholder="Escribe tu correo..">
+                    </section>
+                    <button type="submit">
+                        Suscribirse
+                    </button>
+                </form>
+                <p>Suscríbete para no perderte ninguna de las ofertas.</p>
+            </article>
+        </section>
         <section class="container">
             <section class="footer-info">
                 <img src="img/logo.png" alt="" class="logo">

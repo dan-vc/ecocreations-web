@@ -117,102 +117,22 @@
         <article class="container">
             <h2>Los más vendidos</h2>
             <ul class="wrapper">
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
-                <li class="product-card">
-                    <a href="">
-                        <img src="img/producto-1.png" alt="">
-                    </a>
-                    <section class="product-card__content">
-                        <article class="product-card__content-info">
-                            <h3>Contenedor Hermético Cuadrado 500ml</h3>
-                            <p>$13.00</p>
-                        </article>
-                        <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                    </section>
-                </li>
+                @for ($i = 0; $i < 8; $i++)
+                    <li class="product-card">
+                        <a href="">
+                            <img src="img/producto-1.png" alt="">
+                        </a>
+                        <section class="product-card__content">
+                            <article class="product-card__content-info">
+                                <a href="#">
+                                    <h3>Contenedor Hermético Cuadrado 500ml</h3>
+                                </a>
+                                <p>$13.00</p>
+                            </article>
+                            <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
+                        </section>
+                    </li>
+                @endfor
             </ul>
             <a href="#" class="btn btn-light">Ver más</a>
         </article>
