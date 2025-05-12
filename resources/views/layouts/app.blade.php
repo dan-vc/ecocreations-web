@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cantora+One&family=Chewy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    @yield('styles')
 </head>
 
 <body>
