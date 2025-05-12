@@ -108,7 +108,7 @@
                 <p>En Ecocreations, nos comprometemos con el medio ambiente ofreciendo productos 100% eco-amigables. Cada
                     artículo está cuidadosamente seleccionado para garantizar que puedas disfrutar de lo mejor de la
                     naturaleza sin comprometerla. </p>
-                <a href="#" class="btn btn-light">Leer más</a>
+                <a href="{{ url('nosotros') }}" class="btn btn-light">Leer más</a>
             </section>
         </article>
     </section>

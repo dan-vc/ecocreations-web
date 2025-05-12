@@ -21,8 +21,8 @@
                 <img src="/img/logo.png" alt="Logo del sitio" class="logo">
             </a>
             <nav>
-                <a href="#" class="nav-link">Inicio</a>
-                <a href="#" class="nav-link">Nosotros</a>
+                <a href="{{ url('/') }}" class="nav-link">Inicio</a>
+                <a href="{{ url('nosotros') }}" class="nav-link">Nosotros</a>
                 <a href="#" class="nav-link">Productos</a>
                 <a href="#" class="nav-link">Contacto</a>
                 <form action="#" method="POST" class="search-form-mobile">
@@ -101,10 +101,10 @@
                     <h3>Información</h3>
                     <ul>
                         <li>
-                            <a href="#">Inicio</a>
+                            <a href="{{ url('/') }}">Inicio</a>
                         </li>
                         <li>
-                            <a href="#">Nosotros</a>
+                            <a href="{{ url('nosotros') }}">Nosotros</a>
                         </li>
                         <li>
                             <a href="#">Productos</a>
