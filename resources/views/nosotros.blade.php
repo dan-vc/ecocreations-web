@@ -14,7 +14,7 @@
                     termos, botellas y recipientes únicos.
                 </p>
                 <div class="botones">
-                    <a href="#" class="btn">CONTACTANOS</a>
+                    <a href="#" class="btn">CONTÁCTANOS</a>
                     <a class="btn-2" href="#">VER PRODUCTOS</a>
                 </div>
             </section>
