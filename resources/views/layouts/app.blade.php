@@ -24,7 +24,7 @@
                 <a href="{{ url('/') }}" class="nav-link">Inicio</a>
                 <a href="{{ url('nosotros') }}" class="nav-link">Nosotros</a>
                 <a href="#" class="nav-link">Productos</a>
-                <a href="#" class="nav-link">Contacto</a>
+                <a href="{{ url('contacto') }}" class="nav-link">Contacto</a>
                 <form action="#" method="POST" class="search-form-mobile">
                     @csrf
                     <button type="submit">
@@ -110,7 +110,7 @@
                             <a href="#">Productos</a>
                         </li>
                         <li>
-                            <a href="#">Contacto</a>
+                            <a href="{{ url('contacto') }}">Contacto</a>
                         </li>
                     </ul>
                 </article>
