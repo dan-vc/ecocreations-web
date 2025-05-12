@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&family=Chewy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    width: 1395px;
+    margin: auto;
+}
+
+#hero {
+    min-height: 900px;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #FCFCF7 6%, #549F60 100%);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-family: "Chewy", system-ui;
+        font-size: 32.9px;
+        font-weight: 400;
+        font-size: 100px;
+        color: #215029;
+    }
+
+    p {
+        font-family: "Cantora One", sans-serif;
+        font-weight: 400;
+        color: #333333;
+        font-size: 32px;
+    }
+
+    a {
+        width: 279px;
+        background-color: #333333;
+        height: 59px;
+        color: white;
+        text-decoration: none;
+        font-family: "Cantora One", sans-serif;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botones {
+        display: flex;
+        gap: 40px;
+    }
+
+    .btn-2 {
+        background-color: white;
+        color: #333333;
+        border: solid 1px;
+
+    }
+}
+
+.block-1 {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 170px;
+}
+
+.block-1 .text-1 {
+    padding-bottom: 30px;
+    font-family: "Chewy", system-ui;
+    font-size: 32.9px;
+    font-weight: 400;
+    color: #0D1D31;
+}
+
+.block-1-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    display: flex;
+}
+
+.block-1-cards .card {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 12.74px;
+    text-align: left;
+    width: 321px;
+    height: 224px;
+    padding: 12.74px;
+    background-color: aliceblue;
+}
+
+.block-1-cards .card img {
+    width: 53.07px;
+}
+
+.block-1-cards .card .text-1 {
+    font-family: "Cantora One", sans-serif;
+    font-size: 21.3px;
+    color: #0D1D31;
+}
+
+.block-1-cards .card .text-2 {
+    font-family: "Cantora One", sans-serif;
+    font-size: 16.98px;
+    color: #0D1D31;
+}
+
+.block-2-cards {
+    justify-content: center;
+    display: flex;
+}
+
+.block-2-cards .card-1,
+.card-2 {
+    width: 50%;
+    padding: 50px;
+}
+
+.block-2-cards .card-1 {
+    background-color: #C0EDC8;
+}
+
+.block-2-cards .card-1 .text-1 {
+    color: #333333;
+    font-family: "Cantora One", sans-serif;
+    font-size: 37.23px;
+    padding-bottom: 10px;
+}
+
+.block-2-cards .card-1 .text-2 {
+    color: #333333;
+    font-family: "Cantora One", sans-serif;
+    font-size: 19.21px;
+    padding-bottom: 20px;
+}
+
+.block-2-cards .card-1 button {
+    color: #333333;
+    font-family: "Cantora One", sans-serif;
+    background-color: #C0EDC8;
+    border: none;
+    font-size: 15.61px;
+    border: 1.2px solid #333333;
+    border-radius: 100px;
+    height: 38.21px;
+    width: 176.64px;
+    cursor: pointer;
+}
+
+
+.block-2-cards .card-2 .text-1 {
+    color: #333333;
+    font-family: "Cantora One", sans-serif;
+    font-size: 37.23px;
+    padding-bottom: 10px;
+}
+
+.block-2-cards .card-2 .text-2 {
+    color: #333333;
+    font-family: "Cantora One", sans-serif;
+    font-size: 19.21px;
+    padding-bottom: 20px;
+}
+
+.block-2-cards .card-2 button {
+    color: white;
+    font-family: "Cantora One", sans-serif;
+    background-color: #333333;
+    border: none;
+    font-size: 15.61px;
+    border: 1.2px solid #333333;
+    border-radius: 100px;
+    height: 38.21px;
+    width: 176.64px;
+    cursor: pointer;
+}
+
+.block-3 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: linear-gradient(to bottom, #FFFFFF, #C0EDC8, #FFFFFF);
+
+}
+
+.block-3 .titulo {
+    text-align: center;
+    font-family: "Chewy", system-ui;
+    padding-bottom: 90px;
+    font-size: 32.9px;
+    color: #0D1D31;
+}
+
+.block-3-cards {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.block-3 .card {
+    width: 295.75px;
+    height: 518px;
+}
+
+.block-3 .card .text-1 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #000000;
+    font-family: "Cantora One", sans-serif;
+    font-size: 24px;
+}
+
+.block-3 .card .text-2 {
+    color: #797979;
+    font-family: "Cantora One", sans-serif;
+    font-size: 22px;
+    width: 250px;
+}
+
+@media (max-width: 1145px) {
+
+    .media img {
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 835px) {
+
+    .media img {
+        display: none;
+    }
+
+    .btn,
+    .btn-2 {
+        font-size: 15px !important;
+        width: 250px !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container h1 {
+        font-size: 45px !important;
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 24px !important;
+    }
+
+    .botones{
+        text-align: center !important;
+    }
+
+    .btn,
+    .btn-2 {
+        font-size: 15px !important;
+        width: 150px !important;
+        height: 40px !important;
+    }
+
+    .block-1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .block-1 .text-1 {
+        font-size: 36px;
+    }
+
+    .block-2-cards {
+        display: block;
+    }
+
+    .block-2-cards .card-1,
+    .card-2 {
+        width: auto;
+        text-align: center;
+    }
+}
