@@ -146,4 +146,116 @@ header {
             cursor: pointer;
         }
     }
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .search-form-mobile {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    header {
+        padding: 1rem;
+
+        .logo {
+            min-width: 150px;
+        }
+
+        .cart {
+            min-width: 50px;
+        }
+
+        .search-icon {
+            min-width: 30px;
+        }
+
+        .search-form {
+            display: none;
+        }
+
+        nav {
+            position: absolute;
+            background: var(--light);
+            width: 70vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            gap: 0;
+            z-index: 999;
+
+            .nav-link {
+                padding: 2rem;
+                width: 100%;
+            }
+
+            .search-form-mobile {
+                display: flex;
+                align-self: center;
+
+                padding: .5rem 1rem;
+                border: 1px solid var(--dark);
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background-color: var(--light);
+                box-shadow: 0px 8px 32px var(--shadow-tertiary);
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    padding: 0;
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+
+            transform: translateX(-100%);
+        }
+
+        .menu-icons{
+            display: flex;
+            gap: 1rem;
+        }
+
+        .menu-hamburguesa {
+            display: flex;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        /* Overlay para oscurecer el fondo al abrir el menú */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 900;
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        width: 80vw;
+    }
+
 }

@@ -25,18 +25,31 @@
                 <a href="#" class="nav-link">Nosotros</a>
                 <a href="#" class="nav-link">Productos</a>
                 <a href="#" class="nav-link">Contacto</a>
+                <form action="#" method="POST" class="search-form-mobile">
+                    @csrf
+                    <button type="submit">
+                        <img src="icons/search-normal.svg" alt="" class="search-icon">
+                    </button>
+                    <input type="text" name="search" placeholder="Buscar productos..">
+                </form>
             </nav>
             <form action="#" method="POST" class="search-form">
                 @csrf
                 <button type="submit">
-                    <img src="icons/search-normal.svg" alt="">
+                    <img src="icons/search-normal.svg" alt="" class="search-icon">
                 </button>
                 <input type="text" name="search" placeholder="Buscar productos..">
             </form>
-            <a href="#">
-                <img src="icons/shopping-cart.svg" alt="">
-            </a>
+            <article class="menu-icons">
+                <a href="#">
+                    <img src="icons/shopping-cart.svg" alt="" class="cart">
+                </a>
+                <article class="menu-hamburguesa">
+                    <img src="icons/menu.svg" alt="Menú" class="abrir-menu">
+                </article>
+            </article>
         </section>
+        <div id="overlay"></div>
     </header>
 
     @yield('content')
@@ -57,7 +70,7 @@
                 <p>Suscríbete para no perderte ninguna de las ofertas.</p>
             </article>
         </section>
-        <section class="container">
+        <section class="content">
             <section class="footer-info">
                 <img src="img/logo.png" alt="" class="logo">
                 <ul>
