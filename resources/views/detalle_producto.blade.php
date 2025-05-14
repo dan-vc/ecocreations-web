@@ -42,31 +42,38 @@
         <p class="text_1">PRODUCTOS RECOMENDADOS</p>
         <div class="card-1">
             <div class="card-1-1">
-                <img src="{{ asset('img/detalle_producto/producto ejemplo.png') }}" alt="Foto desde Laravel" width="235"
-                    height="232">
-                <p>TERMOS</p>
-                <p>termo que aguanta el calor por 14 horas en calor</p>
-                <p>S/20.70</p>
-                <button>COMPRAR</button>
+                <div>
+                    <img src="{{ asset('img/detalle_producto/producto ejemplo.png') }}" alt="Foto desde Laravel"
+                        width="235" height="232">
+                    <p class="text_1">TERMOS</p>
+                    <p class="text_2">termo que aguanta el calor por 14 horas en calor</p>
+                    <p class="text_3">S/20.70</p>
+                    <button>COMPRAR</button>
+                </div>
             </div>
 
-            <div>
-                <img src="{{ asset('img/detalle_producto/producto ejemplo.png') }}" alt="Foto desde Laravel" width="235"
-                    height="232">
-                <p>TERMOS</p>
-                <p>termo que aguanta el calor por 14 horas en calor</p>
-                <p>S/20.70</p>
-                <button>COMPRAR</button>
+            <div class="card-1-1">
+                <div>
+                    <img src="{{ asset('img/detalle_producto/producto ejemplo.png') }}" alt="Foto desde Laravel"
+                        width="235" height="232">
+                    <p class="text_1">TERMOS</p>
+                    <p class="text_2">termo que aguanta el calor por 14 horas en calor</p>
+                    <p class="text_3">S/20.70</p>
+                    <button>COMPRAR</button>
+                </div>
             </div>
 
-            <div>
-                <img src="{{ asset('img/detalle_producto/producto ejemplo.png') }}" alt="Foto desde Laravel" width="235"
-                    height="232">
-                <p>TERMOS</p>
-                <p>termo que aguanta el calor por 14 horas en calor</p>
-                <p>S/20.70</p>
-                <button>COMPRAR</button>
+            <div class="card-1-1">
+                <div>
+                    <img src="{{ asset('img/detalle_producto/producto ejemplo.png') }}" alt="Foto desde Laravel"
+                        width="235" height="232">
+                    <p class="text_1">TERMOS</p>
+                    <p class="text_2">termo que aguanta el calor por 14 horas en calor</p>
+                    <p class="text_3">S/20.70</p>
+                    <button>COMPRAR</button>
+                </div>
             </div>
+
         </div>
 
         <div class="hr">
