@@ -8,6 +8,7 @@
 }
 
 .block-1 {
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +18,7 @@
 }
 
 .block-1 .card-2 {
-    width: 574px;
+    max-width: 574px;
 }
 
 .block-1 .text_1 {
@@ -78,7 +79,7 @@
 .hr {
     margin-left: auto;
     margin-right: auto;
-    width: 1300px;
+    max-width: 1300px;
 }
 
 .block-2 {
@@ -117,22 +118,25 @@
 }
 
 .block-2 .card-1 .card-1-1 img {
-    width: 325px;
-    height: 325px;
+    width: 200px;
+    height: 200px;
 }
 
 .block-2 .card-1 .card-1-1 .text_1 {
+    padding-bottom: 10px;
     font-size: 32px;
     color: #000000;
 }
 
 .block-2 .card-1-1 .text_2 {
+    padding-bottom: 10px;
     width: 344px;
     font-size: 24px;
     color: #292D32;
 }
 
 .block-2 .card-1-1 .text_3 {
+    padding-bottom: 10px;
     font-weight: 200;
     font-size: 22px;
     color: #292D32;
@@ -147,4 +151,83 @@
     cursor: pointer;
     border: none;
     border-radius: 20px;
+}
+
+.block-3 {
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.block-3 .card-1 {
+    text-align: center;
+}
+
+.block-3 .card-1 .text_1 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 32px;
+}
+
+.block-3 .card-1 .text_2 {
+    font-size: 20px;
+    width: 253px;
+}
+
+@media (max-width: 500px) {
+
+    .block-1 img {
+        width: 289px;
+        height: 289px;
+    }
+
+    .block-1 .card-2 {
+        width: 305px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .block-1 .card-2 .text_1 {
+        font-size: 25.04px;
+        padding-bottom: 15px;
+    }
+
+    .block-1 .card-2 .text_2 {
+        padding-bottom: 15px;
+        font-size: 25.04px;
+    }
+
+    .block-1 .card-2 .text_3 {
+        padding-bottom: 15px;
+        font-size: 25.04px;
+    }
+
+    .block-1 .card-1-2 .text_1 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 25.04px;
+    }
+
+    .block-1 .card-1-2 .text_2 {
+        font-size: 20.04px;
+    }
+    
+    .block-1 .card-1-2 button {
+        width: 250px;
+        height: 34px;
+        font-size: 14.61px;
+    }
+
+    .block-2{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .block-2 .texto p{
+        font-size: 24px;
+    }
 }
