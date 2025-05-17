@@ -2,6 +2,7 @@
 @section('title', 'Inicio')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product-card.css') }}">
 @endsection
 @section('content')
     <section id="hero">

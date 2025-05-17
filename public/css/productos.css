@@ -1,0 +1,32 @@
+#productos {
+    padding: 5rem 1rem;
+    background:
+        linear-gradient(to bottom,
+            var(--light),
+            #c0edc891,
+            var(--light));
+
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 3rem;
+        align-self: baseline;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
