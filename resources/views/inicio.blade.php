@@ -76,26 +76,32 @@
         <article class="container">
             <h2>Nuestras Categorías</h2>
             <section class="wrapper">
-                <a href="#">
-                    <img src="img/categoria-bolsas.png" alt="">
-                    <p>Bolsas</p>
-                </a>
-                <a href="#">
-                    <img src="img/categoria-botellas.png" alt="">
-                    <p>Botellas</p>
-                </a>
-                <a href="#">
-                    <img src="img/categoria-termos.png" alt="">
-                    <p>Termos</p>
-                </a>
-                <a href="#">
-                    <img src="img/categoria-esponjas.png" alt="">
-                    <p>Esponjas</p>
-                </a>
-                <a href="#">
-                    <img src="img/categoria-recipientes.png" alt="">
-                    <p>Recipientes</p>
-                </a>
+                @foreach ($categorias as $categoria)
+                    @php
+                        switch ($categoria->nomcategoria) {
+                            case 'Bolsas':
+                                $imagen = 'img/categoria-bolsas.png';
+                                break;
+                            case 'Botellas':
+                                $imagen = 'img/categoria-botellas.png';
+                                break;
+                            case 'Termos':
+                                $imagen = 'img/categoria-termos.png';
+                                break;
+                            case 'Artículos del Hogar':
+                                $imagen = 'img/categoria-hogar.png';
+                                break;
+                            case 'Recipientes':
+                                $imagen = 'img/categoria-recipientes.png';
+                                break;
+                        }
+                    @endphp
+
+                    <a href="#">
+                        <img src="{{ asset($imagen) }}" alt="">
+                        <p>{{ $categoria->nomcategoria }}</p>
+                    </a>
+                @endforeach
             </section>
         </article>
     </section>
@@ -118,24 +124,24 @@
         <article class="container">
             <h2>Los más vendidos</h2>
             <ul class="wrapper">
-                @for ($i = 0; $i < 8; $i++)
+                @foreach ($productos as $producto)
                     <li class="product-card">
                         <a href="">
-                            <img src="img/producto-1.png" alt="">
+                            <img src="{{ $producto->imgproducto }}" alt="">
                         </a>
                         <section class="product-card__content">
                             <article class="product-card__content-info">
                                 <a href="#">
-                                    <h3>Contenedor Hermético Cuadrado 500ml</h3>
+                                    <h3>{{ $producto->nomproducto }}</h3>
                                 </a>
-                                <p>$13.00</p>
+                                <p>S/. {{ number_format($producto->preproducto, 2) }}</p>
                             </article>
                             <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
                         </section>
                     </li>
-                @endfor
+                @endforeach
             </ul>
-            <a href="#" class="btn btn-light">Ver más</a>
+            <a href="{{ url('productos') }}" class="btn btn-light">Ver más</a>
         </article>
     </section>
 
