@@ -28,7 +28,7 @@
                 <form action="#" method="POST" class="search-form-mobile">
                     @csrf
                     <button type="submit">
-                        <img src="icons/search-normal.svg" alt="" class="search-icon">
+                        <img src="{{ asset('icons/search-normal.svg') }}" alt="" class="search-icon">
                     </button>
                     <input type="text" name="search" placeholder="Buscar productos..">
                 </form>
@@ -42,10 +42,10 @@
             </form>
             <article class="menu-icons">
                 <a href="#">
-                    <img src="icons/shopping-cart.svg" alt="" class="cart">
+                    <img src="/icons/shopping-cart.svg" alt="" class="cart">
                 </a>
                 <article class="menu-hamburguesa">
-                    <img src="icons/menu.svg" alt="Menú" class="abrir-menu">
+                    <img src="/icons/menu.svg" alt="Menú" class="abrir-menu">
                 </article>
             </article>
         </section>

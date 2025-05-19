@@ -45,12 +45,12 @@
             <ul class="wrapper">
                 @foreach ($productos as $producto)
                     <li class="product-card">
-                        <a href="">
-                            <img src="{{ $producto->imgproducto }}" alt="">
+                        <a href="{{ url('productos/' . $producto->idproducto) }}">
+                            <img src="{{ $producto->imgproducto }}" alt="{{ $producto->idproducto }}" class="product-card__img">
                         </a>
                         <section class="product-card__content">
                             <article class="product-card__content-info">
-                                <a href="#">
+                                <a href="{{ url('productos/' . $producto->idproducto) }}">
                                     <h3>{{ $producto->nomproducto }}</h3>
                                 </a>
                                 <p>S/. {{ number_format($producto->preproducto, 2) }}</p>

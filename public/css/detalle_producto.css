@@ -122,6 +122,23 @@
     height: 200px;
 }
 
+.block-1 .card-2 .text_1 {
+    padding-bottom: 15px;
+}
+
+.block-1 .card-2 .text_2 {
+    padding-bottom: 15px;
+}
+
+.block-1 .card-2 .text_3 {
+    padding-bottom: 15px;
+}
+
+.block-1 .card-1-2 .text_1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .block-2 .card-1 .card-1-1 .text_1 {
     padding-bottom: 10px;
     font-size: 32px;
@@ -129,6 +146,7 @@
 }
 
 .block-2 .card-1-1 .text_2 {
+    margin: auto;
     padding-bottom: 10px;
     width: 344px;
     font-size: 24px;
@@ -142,7 +160,11 @@
     color: #292D32;
 }
 
-.block-2 .card-1-1 button {
+.block-2 .card-1-1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     width: 322px;
     height: 58px;
     background-color: #333333;
@@ -186,7 +208,7 @@
     }
 
     .block-1 .card-2 {
-        width: 305px;
+        width: 405px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -215,19 +237,19 @@
     .block-1 .card-1-2 .text_2 {
         font-size: 20.04px;
     }
-    
+
     .block-1 .card-1-2 button {
         width: 250px;
         height: 34px;
         font-size: 14.61px;
     }
 
-    .block-2{
+    .block-2 {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .block-2 .texto p{
+    .block-2 .texto p {
         font-size: 24px;
     }
 }
