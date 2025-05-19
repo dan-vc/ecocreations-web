@@ -1,0 +1,147 @@
+#categories {
+    padding: 5rem 1rem;
+
+    .container{
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 3rem;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 3rem;
+        flex-wrap: wrap;
+
+        a {
+            width: 100%;
+            max-width: 200px;
+            background: var(--tertiary);
+            border-radius: 30px;
+            padding: .5rem 1rem;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, .1);
+            transition: all ease .3s;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            img {
+                max-width: 100px;
+            }
+
+            &:hover {
+                background: var(--secondary);
+            }
+
+            p {
+                font-size: 26px;
+                text-align: center;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+
+#productos {
+    padding: 5rem 1rem;
+    background:
+        linear-gradient(to bottom,
+            var(--light),
+            #c0edc891,
+            var(--light));
+
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 3rem;
+        align-self: baseline;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .paginacion {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        font-size: 1.5rem;
+
+        .btn-anterior,
+        .btn-siguiente {
+            padding: .5rem 1rem;
+            border: 2px solid var(--dark);
+            background: var(--light);
+            color: var(--dark);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: var(--dark);
+
+                a {
+                    color: var(--light);
+                }
+            }
+
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+
+        .pagination-link {
+            &.active {
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    #productos .wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #categories .wrapper {
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            max-width: 150px;
+        }
+    }
+
+    #productos .wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}

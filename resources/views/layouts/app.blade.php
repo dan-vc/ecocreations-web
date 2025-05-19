@@ -17,13 +17,13 @@
 <body>
     <header>
         <section class="container">
-            <a href="#">
+            <a href="{{ url('/') }}">
                 <img src="/img/logo.png" alt="Logo del sitio" class="logo">
             </a>
             <nav>
                 <a href="{{ url('/') }}" class="nav-link">Inicio</a>
                 <a href="{{ url('nosotros') }}" class="nav-link">Nosotros</a>
-                <a href="#" class="nav-link">Productos</a>
+                <a href="{{ url('productos') }}" class="nav-link">Productos</a>
                 <a href="{{ url('contacto') }}" class="nav-link">Contacto</a>
                 <form action="#" method="POST" class="search-form-mobile">
                     @csrf

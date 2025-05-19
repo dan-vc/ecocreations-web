@@ -20,6 +20,7 @@ html {
 }
 
 body {
+    padding-top: 100px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -219,7 +220,7 @@ header {
             transform: translateX(-100%);
         }
 
-        .menu-icons{
+        .menu-icons {
             display: flex;
             gap: 1rem;
         }

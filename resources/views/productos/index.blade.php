@@ -1,0 +1,70 @@
+@extends('layouts.app')
+@section('title', 'Productos')
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/productos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product-card.css') }}">
+@endsection
+@section('content')
+    <section id="categories">
+        <article class="container">
+            <h2>Nuestras Categorías</h2>
+            <section class="wrapper">
+                @foreach ($categorias as $categoria)
+                    @php
+                        switch ($categoria->nomcategoria) {
+                            case 'Bolsas':
+                                $imagen = 'img/categoria-bolsas.png';
+                                break;
+                            case 'Botellas':
+                                $imagen = 'img/categoria-botellas.png';
+                                break;
+                            case 'Termos':
+                                $imagen = 'img/categoria-termos.png';
+                                break;
+                            case 'Artículos del Hogar':
+                                $imagen = 'img/categoria-hogar.png';
+                                break;
+                            case 'Recipientes':
+                                $imagen = 'img/categoria-recipientes.png';
+                                break;
+                        }
+                    @endphp
+
+                    <a href="#">
+                        <img src="{{ asset($imagen) }}" alt="">
+                        <p>{{ $categoria->nomcategoria }}</p>
+                    </a>
+                @endforeach
+            </section>
+        </article>
+    </section>
+
+    <section id="productos">
+        <article class="container">
+            <h2>Nuestros Productos</h2>
+            <ul class="wrapper">
+                @foreach ($productos as $producto)
+                    <li class="product-card">
+                        <a href="">
+                            <img src="{{ $producto->imgproducto }}" alt="">
+                        </a>
+                        <section class="product-card__content">
+                            <article class="product-card__content-info">
+                                <a href="#">
+                                    <h3>{{ $producto->nomproducto }}</h3>
+                                </a>
+                                <p>S/. {{ number_format($producto->preproducto, 2) }}</p>
+                            </article>
+                            <img src="/icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
+                        </section>
+                    </li>
+                @endforeach
+            </ul>
+            <!-- Botón de paginación -->
+            <div class="paginacion">
+                {{ $productos->links('components.pagination') }}
+            </div>
+            {{-- <a href="#" class="btn btn-light">Ver más</a> --}}
+        </article>
+    </section>
+@endsection
