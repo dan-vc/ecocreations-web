@@ -27,7 +27,7 @@
                 <a href="{{ url('nosotros') }}" class="nav-link">Nosotros</a>
                 <a href="{{ url('productos') }}" class="nav-link">Productos</a>
                 <a href="{{ url('contacto') }}" class="nav-link">Contacto</a>
-                <form action="#" method="POST" class="search-form-mobile">
+                <form action="{{ url('productos/buscar') }}" method="POST" class="search-form-mobile">
                     @csrf
                     <button type="submit">
                         <img src="/icons/search-normal.svg" alt="" class="search-icon">
@@ -35,7 +35,7 @@
                     <input type="text" name="search" placeholder="Buscar productos..">
                 </form>
             </nav>
-            <form action="#" method="POST" class="search-form">
+            <form action="{{ url('productos/buscar') }}" method="POST" class="search-form">
                 @csrf
                 <button type="submit">
                     <img src="/icons/search-normal.svg" alt="" class="search-icon">
@@ -86,15 +86,15 @@
                     <ul>
                         <li>
                             <img src="/icons/ig.svg" alt="">
-                            <a href="#">Instagram</a>
+                            <a href="https://www.instagram.com/eco_creations_s.a.c/">Instagram</a>
                         </li>
                         <li>
                             <img src="/icons/shopping-cart.svg" alt="">
-                            <a href="#">TikTok</a>
+                            <a href="https://www.tiktok.com/@ecocreations_sac">TikTok</a>
                         </li>
                         <li>
                             <img src="/icons/facebook.svg" alt="">
-                            <a href="#">Facebook</a>
+                            <a href="https://www.facebook.com/people/Eco-Creations-SAC/61575799477722/">Facebook</a>
                         </li>
                     </ul>
                 </article>
@@ -108,7 +108,7 @@
                             <a href="{{ url('nosotros') }}">Nosotros</a>
                         </li>
                         <li>
-                            <a href="#">Productos</a>
+                            <a href="{{ url('productos') }}">Productos</a>
                         </li>
                         <li>
                             <a href="{{ url('contacto') }}">Contacto</a>
@@ -119,19 +119,19 @@
                     <h3>Categorías</h3>
                     <ul>
                         <li>
-                            <a href="#">Bolsas</a>
+                            <a href="{{ url('productos/categoria/1') }}">Bolsas</a>
                         </li>
                         <li>
-                            <a href="#">Botellas</a>
+                            <a href="{{ url('productos/categoria/2') }}">Botellas</a>
                         </li>
                         <li>
-                            <a href="#">Termos</a>
+                            <a href="{{ url('productos/categoria/3') }}">Termos</a>
                         </li>
                         <li>
-                            <a href="#">Esponjas</a>
+                            <a href="{{ url('productos/categoria/4') }}">Artículos para el hogar</a>
                         </li>
                         <li>
-                            <a href="#">Recipientes</a>
+                            <a href="{{ url('productos/categoria/5') }}">Recipientes</a>
                         </li>
                     </ul>
                 </article>
@@ -159,18 +159,6 @@
                 carrito.classList.remove('active');
                 overlay.classList.remove('active');
             });
-        });
-
-        window.addEventListener('producto-agregado', event => {
-            alert(`Producto "${event.detail.nombre}" agregado al carrito.`);
-
-            const overlay = document.getElementById('overlay');
-            const carrito = document.querySelector('.carrito');
-
-            if (overlay && carrito) {
-                carrito.classList.add('active');
-                overlay.classList.add('active');
-            }
         });
     </script>
 </body>

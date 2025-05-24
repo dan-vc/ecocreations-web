@@ -14,8 +14,8 @@
                     termos, botellas y recipientes únicos.
                 </p>
                 <div class="botones">
-                    <a href="#" class="btn">CONTÁCTANOS</a>
-                    <a class="btn-2" href="#">VER PRODUCTOS</a>
+                    <a href="{{ url('contacto') }}" class="btn">CONTÁCTANOS</a>
+                    <a class="btn-2" href="{{ url('productos') }}">VER PRODUCTOS</a>
                 </div>
             </section>
             <section class="media">
@@ -70,7 +70,6 @@
                     hogar y el día a día,
                     elaboradas a partir de materiales reciclados. Buscamos inspirar un consumo consciente y responsable,
                     demostrando que la reutilización puede ser sinónimo de calidad, diseño y practicidad.</p>
-                <button>VER PRODUCTOS</button>
             </article>
 
             <article class="card-2">
@@ -79,7 +78,6 @@
                     hogar y el día a día,
                     elaboradas a partir de materiales reciclados. Buscamos inspirar un consumo consciente y responsable,
                     demostrando que la reutilización puede ser sinónimo de calidad, diseño y practicidad.</p>
-                <button>VER PRODUCTOS</button>
             </article>
         </section>
     </section>

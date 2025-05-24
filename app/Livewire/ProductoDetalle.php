@@ -38,7 +38,7 @@ class ProductoDetalle extends Component
                 'precio' => $this->producto->preproducto,
                 'imagen' => $this->producto->imgproducto,
                 'descripcion' => $this->producto->desproducto,
-                'cantidad' => 1,
+                'cantidad' => $this->cantidad,
             ];
         }
 

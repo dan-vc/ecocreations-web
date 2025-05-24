@@ -44,7 +44,7 @@
                     <h3>RESUMEN DEL PEDIDO</h3>
 
                     <div class="summary-line">
-                        <span>Subtotal ({{ count($carrito) }} productos)</span>
+                        <span>Subtotal ({{ count($carrito) }} producto{{ count($carrito) !== 1 ? 's' : '' }})</span>
                         <span>S/{{ number_format($total, 2) }}</span>
                     </div>
 
@@ -91,15 +91,22 @@
 
                 @foreach ($productosRecomendados as $producto)
                     <div class="product-card">
-                        <a href="{{ url('productos/' . $producto->idproducto) }}"><img src="{{ $producto->imgproducto }}" alt="Vaso"></a>
-                        <a href="{{ url('productos/' . $producto->idproducto) }}"><h3>{{ $producto->nomproducto }}</h3></a>
+                        <a href="{{ url('productos/' . $producto->idproducto) }}"><img
+                                src="{{ $producto->imgproducto }}" alt="Vaso"></a>
+                        <a href="{{ url('productos/' . $producto->idproducto) }}">
+                            <h3>{{ $producto->nomproducto }}</h3>
+                        </a>
                         <p>{{ $producto->desproducto }}</p>
                         <div class="product-price">S/{{ number_format($producto->preproducto, 2) }}</div>
-                        <button class="add-to-cart-btn" wire:click="agregar({{ $producto->idproducto }})">AGREGAR AL CARRITO</button>
+                        <button class="add-to-cart-btn" wire:click="agregar({{ $producto->idproducto }})">AGREGAR AL
+                            CARRITO</button>
                     </div>
                 @endforeach
             </div>
         </div>
 
     </div>
+
+    {{-- <script type="module" src="/js/carrito.js"></script> --}}
+
 </main>

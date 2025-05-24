@@ -5,28 +5,38 @@
         <h1 class="page-title">FINALIZAR COMPRA</h1>
 
         <div class="checkout-layout">
-            <form class="checkout-form">
+            <form wire:submit.prevent="handleFormSubmit" class="checkout-form">
                 <!-- Información Personal -->
                 <div class="form-section">
                     <h2>INFORMACIÓN PERSONAL</h2>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nombre">Nombre *</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <input type="text" id="nombre" name="nombre" wire:model="nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="apellidos">Apellidos *</label>
-                            <input type="text" id="apellidos" name="apellidos" required>
+                            <input type="text" id="apellidos" name="apellidos" wire:model="apellidos" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" name="sexo" wire:model="sexo" required>
+                                <option value="">Seleccione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Correo Electrónico *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" wire:model="email" required>
                         </div>
                         <div class="form-group">
                             <label for="telefono">Teléfono *</label>
-                            <input type="tel" id="telefono" name="telefono" required>
+                            <input type="tel" id="telefono" name="telefono" wire:model="telefono" required>
                         </div>
                     </div>
                 </div>
@@ -36,26 +46,26 @@
                     <h2>DIRECCIÓN DE ENVÍO</h2>
                     <div class="form-group">
                         <label for="direccion">Dirección *</label>
-                        <input type="text" id="direccion" name="direccion" required>
+                        <input type="text" id="direccion" name="direccion" wire:model="direccion" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="ciudad">Ciudad *</label>
-                            <input type="text" id="ciudad" name="ciudad" required>
+                            <input type="text" id="ciudad" name="ciudad" wire:model="ciudad" required>
                         </div>
                         <div class="form-group">
                             <label for="distrito">Distrito *</label>
-                            <input type="text" id="distrito" name="distrito" required>
+                            <input type="text" id="distrito" name="distrito" wire:model="distrito" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="codigo_postal">Código Postal</label>
-                            <input type="text" id="codigo_postal" name="codigo_postal">
+                            <input type="text" id="codigo_postal" name="codigo_postal" wire:model="codigo_postal">
                         </div>
                         <div class="form-group">
                             <label for="referencia">Referencia</label>
-                            <input type="text" id="referencia" name="referencia"
+                            <input type="text" id="referencia" name="referencia" wire:model="referencia"
                                 placeholder="Ej: Casa azul, al lado del parque">
                         </div>
                     </div>
@@ -68,20 +78,6 @@
                         <div class="payment-option">
                             <input type="radio" id="tarjeta" name="metodo_pago" value="tarjeta" checked>
                             <label for="tarjeta">🏦 Depósito Bancario</label>
-                        </div>
-                    </div>
-
-                    <!-- Detalles de Tarjeta -->
-                    <div id="card-details" class="card-details">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="numero_cuenta">Número de Cuenta</label>
-                                <p>1234 5678 9012 3456</p>
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre_cuenta">Nombre en la Cuenta</label>
-                                <p>Juan Pérez</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,7 +138,7 @@
                         </div>
                     </div>
 
-                    <button class="place-order-btn" data-action="place-order">
+                    <button class="place-order-btn" wire:click="handleFormSubmit">
                         REALIZAR PEDIDO
                     </button>
 

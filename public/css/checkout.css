@@ -96,7 +96,9 @@ body {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
+    width: 100%;
     padding: 12px 15px;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -106,7 +108,8 @@ body {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: #215029;
 }
