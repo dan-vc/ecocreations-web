@@ -30,7 +30,7 @@
                         }
                     @endphp
 
-                    <a href="#">
+                    <a href="{{ url('productos/categoria/' . $categoria->idcategoria) }}" class="category-card">
                         <img src="{{ asset($imagen) }}" alt="">
                         <p>{{ $categoria->nomcategoria }}</p>
                     </a>
@@ -41,12 +41,22 @@
 
     <section id="productos">
         <article class="container">
-            <h2>Nuestros Productos</h2>
+            @if ($productos->isEmpty())
+                <h2>No se encontraron productos.</h2>
+            @else
+                <h2>Nuestros Productos - @if (isset($categoriaSeleccionada))
+                        {{ $categoriaSeleccionada->nomcategoria }}
+                    @else
+                        Todas las Categorías
+                    @endif
+                </h2>
+            @endif
             <ul class="wrapper">
                 @foreach ($productos as $producto)
                     <li class="product-card">
                         <a href="{{ url('productos/' . $producto->idproducto) }}">
-                            <img src="{{ $producto->imgproducto }}" alt="{{ $producto->idproducto }}" class="product-card__img">
+                            <img src="{{ $producto->imgproducto }}" alt="{{ $producto->idproducto }}"
+                                class="product-card__img">
                         </a>
                         <section class="product-card__content">
                             <article class="product-card__content-info">
@@ -60,11 +70,13 @@
                     </li>
                 @endforeach
             </ul>
-            <!-- Botón de paginación -->
-            <div class="paginacion">
-                {{ $productos->links('components.pagination') }}
-            </div>
-            {{-- <a href="#" class="btn btn-light">Ver más</a> --}}
+
+            <!-- Verificamos si existe paginacion -->
+            @if (method_exists($productos, 'links'))
+                <div class="paginacion">
+                    {{ $productos->links('components.pagination') }}
+                </div>
+            @endif
         </article>
     </section>
 @endsection

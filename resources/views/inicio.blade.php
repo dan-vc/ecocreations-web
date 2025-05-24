@@ -11,7 +11,7 @@
                 <h1>Productos ecológicos a tu medida</h1>
                 <p>Ofrecemos alternativas sostenibles para el día a día adaptadas a tus necesidades y gustos específicos.
                 </p>
-                <a href="#" class="btn">Descubre más</a>
+                <a href="{{ url('productos') }}" class="btn">Descubre más</a>
             </section>
             <section class="media">
                 <img src="img/banner-hero.png" alt="">
@@ -23,31 +23,31 @@
         <article class="container">
             <ul>
                 <li>
-                    <img src="icons/headphones.svg" alt="">
+                    <img src="/icons/headphones.svg" alt="">
                     <article>
                         <p>Atención las 24h</p>
                         <p>Soporte personalizado</p>
                     </article>
                 </li>
                 <li>
-                    <img src="icons/headphones.svg" alt="">
+                    <img src="/icons/shield.svg" alt="">
                     <article>
-                        <p>Atención las 24h</p>
-                        <p>Soporte personalizado</p>
+                        <p>Pagos seguros</p>
+                        <p>Confianza en tus compras</p>
                     </article>
                 </li>
                 <li>
-                    <img src="icons/headphones.svg" alt="">
+                    <img src="/icons/returns.svg" alt="">
                     <article>
-                        <p>Atención las 24h</p>
-                        <p>Soporte personalizado</p>
+                        <p>Reembolsos</p>
+                        <p>Devuelve los artículos dañados</p>
                     </article>
                 </li>
                 <li>
-                    <img src="icons/headphones.svg" alt="">
+                    <img src="/icons/archive.svg" alt="">
                     <article>
-                        <p>Atención las 24h</p>
-                        <p>Soporte personalizado</p>
+                        <p>Envíos gratis</p>
+                        <p>Desde S/. 50.00</p>
                     </article>
                 </li>
             </ul>
@@ -62,7 +62,7 @@
                     <p>Ofertas de Verano</p>
                     <span>50% Dsc en</span>
                     <h2>Bolsas Reciclables</h2>
-                    <a href="#" class="btn btn-light">Comprar Ahora</a>
+                    <a href="{{ url('productos/categoria/1') }}" class="btn btn-light">Comprar Ahora</a>
                 </article>
             </section>
             <section class="bento2">
@@ -97,7 +97,7 @@
                         }
                     @endphp
 
-                    <a href="#">
+                    <a href="{{ url('productos/categoria/' . $categoria->idcategoria) }}">
                         <img src="{{ asset($imagen) }}" alt="">
                         <p>{{ $categoria->nomcategoria }}</p>
                     </a>
@@ -126,12 +126,12 @@
             <ul class="wrapper">
                 @foreach ($productos as $producto)
                     <li class="product-card">
-                        <a href="">
+                        <a href="{{ url('productos/' . $producto->idproducto) }}">
                             <img src="{{ $producto->imgproducto }}" alt="">
                         </a>
                         <section class="product-card__content">
                             <article class="product-card__content-info">
-                                <a href="#">
+                                <a href="{{ url('productos/' . $producto->idproducto) }}">
                                     <h3>{{ $producto->nomproducto }}</h3>
                                 </a>
                                 <p>S/. {{ number_format($producto->preproducto, 2) }}</p>

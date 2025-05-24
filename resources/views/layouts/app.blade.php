@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ secure_asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ secure_asset('css/footer.css') }}">
     @yield('styles')
+    @livewireStyles
 </head>
 
 <body>
@@ -25,24 +26,24 @@
                 <a href="{{ url('nosotros') }}" class="nav-link">Nosotros</a>
                 <a href="{{ url('productos') }}" class="nav-link">Productos</a>
                 <a href="{{ url('contacto') }}" class="nav-link">Contacto</a>
-                <form action="#" method="POST" class="search-form-mobile">
+                <form action="{{ url('productos/buscar') }}" method="POST" class="search-form-mobile">
                     @csrf
                     <button type="submit">
-                        <img src="{{ asset('icons/search-normal.svg') }}" alt="" class="search-icon">
+                        <img src="/icons/search-normal.svg" alt="" class="search-icon">
                     </button>
                     <input type="text" name="search" placeholder="Buscar productos..">
                 </form>
             </nav>
-            <form action="#" method="POST" class="search-form">
+            <form action="{{ url('productos/buscar') }}" method="POST" class="search-form">
                 @csrf
                 <button type="submit">
-                    <img src="icons/search-normal.svg" alt="" class="search-icon">
+                    <img src="/icons/search-normal.svg" alt="" class="search-icon">
                 </button>
                 <input type="text" name="search" placeholder="Buscar productos..">
             </form>
             <article class="menu-icons">
-                <a href="#">
-                    <img src="/icons/shopping-cart.svg" alt="" class="cart">
+                <a href="{{ url('carrito') }}" class="nav-link">
+                    <img src="/icons/shopping-cart.svg" alt="" class="cart" id="showCart">
                 </a>
                 <article class="menu-hamburguesa">
                     <img src="/icons/menu.svg" alt="Menú" class="abrir-menu">
@@ -60,7 +61,6 @@
                 <form action="#" method="POST" class="subscribe-form">
                     @csrf
                     <section class="input-group">
-                        <img src="icons/envelope.svg" alt="">
                         <input type="text" name="search" placeholder="Escribe tu correo..">
                     </section>
                     <button type="submit">
@@ -72,7 +72,7 @@
         </section>
         <section class="content">
             <section class="footer-info">
-                <img src="img/logo.png" alt="" class="logo">
+                <img src="/img/logo.png" alt="" class="logo">
                 <ul>
                     <li>Correo: <a href="#">ecocreations@contacto.com</a></li>
                     <li>Teléfono: <a href="#">999999999</a></li>
@@ -84,16 +84,16 @@
                     <h3>Redes</h3>
                     <ul>
                         <li>
-                            <img src="icons/ig.svg" alt="">
-                            <a href="#">Instagram</a>
+                            <img src="/icons/ig.svg" alt="">
+                            <a href="https://www.instagram.com/eco_creations_s.a.c/">Instagram</a>
                         </li>
                         <li>
-                            <img src="icons/shopping-cart.svg" alt="">
-                            <a href="#">TikTok</a>
+                            <img src="/icons/shopping-cart.svg" alt="">
+                            <a href="https://www.tiktok.com/@ecocreations_sac">TikTok</a>
                         </li>
                         <li>
-                            <img src="icons/facebook.svg" alt="">
-                            <a href="#">Facebook</a>
+                            <img src="/icons/facebook.svg" alt="">
+                            <a href="https://www.facebook.com/people/Eco-Creations-SAC/61575799477722/">Facebook</a>
                         </li>
                     </ul>
                 </article>
@@ -107,7 +107,7 @@
                             <a href="{{ url('nosotros') }}">Nosotros</a>
                         </li>
                         <li>
-                            <a href="#">Productos</a>
+                            <a href="{{ url('productos') }}">Productos</a>
                         </li>
                         <li>
                             <a href="{{ url('contacto') }}">Contacto</a>
@@ -118,19 +118,19 @@
                     <h3>Categorías</h3>
                     <ul>
                         <li>
-                            <a href="#">Bolsas</a>
+                            <a href="{{ url('productos/categoria/1') }}">Bolsas</a>
                         </li>
                         <li>
-                            <a href="#">Botellas</a>
+                            <a href="{{ url('productos/categoria/2') }}">Botellas</a>
                         </li>
                         <li>
-                            <a href="#">Termos</a>
+                            <a href="{{ url('productos/categoria/3') }}">Termos</a>
                         </li>
                         <li>
-                            <a href="#">Esponjas</a>
+                            <a href="{{ url('productos/categoria/4') }}">Artículos para el hogar</a>
                         </li>
                         <li>
-                            <a href="#">Recipientes</a>
+                            <a href="{{ url('productos/categoria/5') }}">Recipientes</a>
                         </li>
                     </ul>
                 </article>
@@ -140,6 +140,26 @@
             <p>© 2023 EcoCreations. Todos los derechos reservados.</p>
         </section>
     </footer>
+
+    @livewireScripts
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mostrarCarrito = document.querySelector('#showCart');
+            const overlay = document.getElementById('overlay');
+            const carrito = document.querySelector('.carrito');
+
+            mostrarCarrito.addEventListener('click', function() {
+                carrito.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', function() {
+                carrito.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
