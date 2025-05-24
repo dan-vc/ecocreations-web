@@ -22,3 +22,7 @@ Route::get('contacto', function () {
 Route::get('productos', [ProductoController::class, 'index']);
 
 Route::get('productos/{id}', [ProductoController::class, 'show']);
+
+Route::get('carrito', function (){
+    return view('carrito');
+});

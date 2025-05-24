@@ -21,7 +21,7 @@
             <section class="card-1-2">
                 <p class="text_1">Descripción</p>
                 <p class="text_2">{{ $producto->desproducto }}</p>
-                <button>Agregar al Carrito</button>
+                <livewire:boton-agregar-carrito :producto="$producto" />
             </section>
         </section>
     </section>

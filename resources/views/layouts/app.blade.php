@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cantora+One&family=Chewy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/carrito-flotante.css') }}">
     @yield('styles')
+    @livewireStyles
 </head>
 
 <body>
@@ -42,7 +44,7 @@
             </form>
             <article class="menu-icons">
                 <a href="#">
-                    <img src="/icons/shopping-cart.svg" alt="" class="cart">
+                    <img src="/icons/shopping-cart.svg" alt="" class="cart" id="showCart">
                 </a>
                 <article class="menu-hamburguesa">
                     <img src="/icons/menu.svg" alt="Menú" class="abrir-menu">
@@ -140,6 +142,38 @@
             <p>© 2023 EcoCreations. Todos los derechos reservados.</p>
         </section>
     </footer>
+
+    @livewireScripts
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mostrarCarrito = document.querySelector('#showCart');
+            const overlay = document.getElementById('overlay');
+            const carrito = document.querySelector('.carrito');
+
+            mostrarCarrito.addEventListener('click', function() {
+                carrito.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', function() {
+                carrito.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('producto-agregado', event => {
+            alert(`Producto "${event.detail.nombre}" agregado al carrito.`);
+
+            const overlay = document.getElementById('overlay');
+            const carrito = document.querySelector('.carrito');
+
+            if (overlay && carrito) {
+                carrito.classList.add('active');
+                overlay.classList.add('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
