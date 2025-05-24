@@ -30,7 +30,7 @@
                 <form action="#" method="POST" class="search-form-mobile">
                     @csrf
                     <button type="submit">
-                        <img src="{{ asset('icons/search-normal.svg') }}" alt="" class="search-icon">
+                        <img src="/icons/search-normal.svg" alt="" class="search-icon">
                     </button>
                     <input type="text" name="search" placeholder="Buscar productos..">
                 </form>
@@ -38,12 +38,12 @@
             <form action="#" method="POST" class="search-form">
                 @csrf
                 <button type="submit">
-                    <img src="icons/search-normal.svg" alt="" class="search-icon">
+                    <img src="/icons/search-normal.svg" alt="" class="search-icon">
                 </button>
                 <input type="text" name="search" placeholder="Buscar productos..">
             </form>
             <article class="menu-icons">
-                <a href="#">
+                <a href="{{ url('carrito') }}" class="nav-link">
                     <img src="/icons/shopping-cart.svg" alt="" class="cart" id="showCart">
                 </a>
                 <article class="menu-hamburguesa">
@@ -62,7 +62,6 @@
                 <form action="#" method="POST" class="subscribe-form">
                     @csrf
                     <section class="input-group">
-                        <img src="icons/envelope.svg" alt="">
                         <input type="text" name="search" placeholder="Escribe tu correo..">
                     </section>
                     <button type="submit">
@@ -74,7 +73,7 @@
         </section>
         <section class="content">
             <section class="footer-info">
-                <img src="img/logo.png" alt="" class="logo">
+                <img src="/img/logo.png" alt="" class="logo">
                 <ul>
                     <li>Correo: <a href="#">ecocreations@contacto.com</a></li>
                     <li>Teléfono: <a href="#">999999999</a></li>
@@ -86,15 +85,15 @@
                     <h3>Redes</h3>
                     <ul>
                         <li>
-                            <img src="icons/ig.svg" alt="">
+                            <img src="/icons/ig.svg" alt="">
                             <a href="#">Instagram</a>
                         </li>
                         <li>
-                            <img src="icons/shopping-cart.svg" alt="">
+                            <img src="/icons/shopping-cart.svg" alt="">
                             <a href="#">TikTok</a>
                         </li>
                         <li>
-                            <img src="icons/facebook.svg" alt="">
+                            <img src="/icons/facebook.svg" alt="">
                             <a href="#">Facebook</a>
                         </li>
                     </ul>

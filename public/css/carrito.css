@@ -166,6 +166,13 @@ body {
     color: white;
 }
 
+/* Cart Empty */
+.empty-cart .continue-shopping{
+    margin-top: 20px;
+    display: block; 
+    text-align: center;
+}
+
 /* Cart Summary */
 .cart-summary {
     position: sticky;
@@ -250,6 +257,8 @@ hr {
 }
 
 .checkout-btn {
+    display: block;
+    text-align: center;
     width: 100%;
     background-color: #215029;
     color: white;
@@ -269,6 +278,8 @@ hr {
 }
 
 .continue-shopping {
+    display: block;
+    text-align: center;
     width: 100%;
     background-color: transparent;
     color: #215029;
@@ -396,6 +407,9 @@ hr {
 }
 
 .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     padding: 20px;
     border: 1px solid #eee;

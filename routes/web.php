@@ -26,3 +26,7 @@ Route::get('productos/{id}', [ProductoController::class, 'show']);
 Route::get('carrito', function (){
     return view('carrito');
 });
+
+Route::get('checkout', function (){
+    return view('checkout');
+});
