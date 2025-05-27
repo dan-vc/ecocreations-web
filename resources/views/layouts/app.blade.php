@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantora+One&family=Chewy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ secure_asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('css/footer.css') }}">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     @yield('styles')
     @livewireStyles
 </head>
@@ -143,23 +143,7 @@
 
     @livewireScripts
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mostrarCarrito = document.querySelector('#showCart');
-            const overlay = document.getElementById('overlay');
-            const carrito = document.querySelector('.carrito');
-
-            mostrarCarrito.addEventListener('click', function() {
-                carrito.classList.toggle('active');
-                overlay.classList.toggle('active');
-            });
-
-            overlay.addEventListener('click', function() {
-                carrito.classList.remove('active');
-                overlay.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="/js/hamburguer-menu.js"></script>
 </body>
 
 </html>

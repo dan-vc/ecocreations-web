@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Productos')
 @section('styles')
-    <link rel="stylesheet" href="{{ secure_asset('css/productos.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('css/product-card.css') }}">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="/css/product-card.css">
 @endsection
 @section('content')
     <section id="categories">

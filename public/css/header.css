@@ -185,7 +185,13 @@ header {
             left: 0;
             gap: 0;
             z-index: 999;
+            transition: all ease .3s;
+            transform: translateX(-100%);
 
+            &.active{
+                transform: translateX(0);
+            }
+            
             .nav-link {
                 padding: 2rem;
                 width: 100%;
@@ -217,7 +223,6 @@ header {
                 }
             }
 
-            transform: translateX(-100%);
         }
 
         .menu-icons {
@@ -245,6 +250,11 @@ header {
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             z-index: 900;
+
+            &.active {
+                pointer-events: auto;
+                opacity: 1;
+            }
         }
     }
 
