@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Contáctanos')
 @section('styles')
-    <link rel="stylesheet" href="/'css/contacto.css">
+    <link rel="stylesheet" href="/css/contacto.css">
 @endsection
 @section('content')
     <div class="contact-container">
