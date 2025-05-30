@@ -2,6 +2,7 @@
 @section('title', 'Nosotros')
 @section('styles')
     <link rel="stylesheet" href="/css/nosotros.css">
+    <link rel="stylesheet" href="/css/base.css">
 @endsection
 @section('content')
     <section id="hero">
@@ -15,7 +16,7 @@
                 </p>
                 <div class="botones">
                     <a href="{{ url('contacto') }}" class="btn">CONTÁCTANOS</a>
-                    <a class="btn-2" href="{{ url('productos') }}">VER PRODUCTOS</a>
+                    <a href="{{ url('productos') }}" class="btn btn-light">VER PRODUCTOS</a>
                 </div>
             </section>
             <section class="media">

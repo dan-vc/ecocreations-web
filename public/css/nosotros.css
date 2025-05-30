@@ -1,17 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cantora+One&family=Chewy&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 100%;
-    max-width: 1395px;
-    margin: auto;
-}
-
 #hero {
     min-height: calc(900px - 100px);
     padding: 2rem 1rem;
@@ -31,49 +17,23 @@
     }
 
     .content {
+        max-width: 30rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
     h1 {
-        font-family: "Chewy", system-ui;
-        font-size: 32.9px;
-        font-weight: 400;
-        font-size: 100px;
-        color: #215029;
+        font-size: 5rem;
     }
 
     p {
-        font-family: "Cantora One", sans-serif;
-        font-weight: 400;
-        color: #333333;
-        font-size: 32px;
-    }
-
-    a {
-        width: 279px;
-        background-color: #333333;
-        height: 59px;
-        color: white;
-        text-decoration: none;
-        font-family: "Cantora One", sans-serif;
-        font-size: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 1.5rem;
     }
 
     .botones {
         display: flex;
-        gap: 40px;
-    }
-
-    .btn-2 {
-        background-color: white;
-        color: #333333;
-        border: solid 1px;
-
+        gap: 1.5rem;
     }
 }
 
@@ -85,7 +45,6 @@
 
 .block-1 .text-1 {
     padding-bottom: 30px;
-    font-family: "Chewy", system-ui;
     font-size: 32.9px;
     font-weight: 400;
     color: #0D1D31;
@@ -114,13 +73,11 @@
 }
 
 .block-1-cards .card .text-1 {
-    font-family: "Cantora One", sans-serif;
     font-size: 21.3px;
     color: #0D1D31;
 }
 
 .block-1-cards .card .text-2 {
-    font-family: "Cantora One", sans-serif;
     font-size: 16.98px;
     color: #0D1D31;
 }
@@ -141,50 +98,29 @@
 }
 
 .block-2-cards .card-1 .text-1 {
-    color: #333333;
-    font-family: "Cantora One", sans-serif;
     font-size: 37.23px;
     padding-bottom: 10px;
 }
 
 .block-2-cards .card-1 .text-2 {
-    color: #333333;
-    font-family: "Cantora One", sans-serif;
     font-size: 19.21px;
     padding-bottom: 20px;
 }
 
-.block-2-cards .card-1 button {
-    color: #333333;
-    font-family: "Cantora One", sans-serif;
-    background-color: #C0EDC8;
-    border: none;
-    font-size: 15.61px;
-    border: 1.2px solid #333333;
-    border-radius: 100px;
-    height: 38.21px;
-    width: 176.64px;
-    cursor: pointer;
-}
-
-
 .block-2-cards .card-2 .text-1 {
     color: #333333;
-    font-family: "Cantora One", sans-serif;
     font-size: 37.23px;
     padding-bottom: 10px;
 }
 
 .block-2-cards .card-2 .text-2 {
     color: #333333;
-    font-family: "Cantora One", sans-serif;
     font-size: 19.21px;
     padding-bottom: 20px;
 }
 
 .block-2-cards .card-2 button {
     color: white;
-    font-family: "Cantora One", sans-serif;
     background-color: #333333;
     border: none;
     font-size: 15.61px;
@@ -198,13 +134,12 @@
 .block-3 {
     padding-top: 150px;
     padding-bottom: 150px;
-    background: linear-gradient(to bottom, #FFFFFF, #C0EDC8, #FFFFFF);
+    background: linear-gradient(to bottom, var(--light), #C0EDC8, var(--light));
 
 }
 
 .block-3 .titulo {
     text-align: center;
-    font-family: "Chewy", system-ui;
     padding-bottom: 90px;
     font-size: 32.9px;
     color: #0D1D31;
@@ -226,14 +161,11 @@
 .block-3 .card .text-1 {
     padding-top: 10px;
     padding-bottom: 5px;
-    color: #000000;
-    font-family: "Cantora One", sans-serif;
     font-size: 24px;
 }
 
 .block-3 .card .text-2 {
     color: #797979;
-    font-family: "Cantora One", sans-serif;
     font-size: 22px;
     width: 250px;
 }
