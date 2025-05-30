@@ -1,18 +1,6 @@
-.container {
-    width: 100%;
-    max-width: 1280px;
-    margin: auto;
-}
-
-img {
-    max-width: 100%;
-    object-fit: cover;
-}
-
-
 #hero {
-    min-height: calc(900px - 100px);
     padding: 2rem 1rem;
+    min-height: calc(900px - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,16 +24,16 @@ img {
     }
 
     h1 {
-        font-size: 100px;
+        font-size: 5rem;
     }
 
     p {
-        font-size: 32px;
+        font-size: 1.5rem;
     }
 }
 
 #features {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
 
     ul {
         display: flex;
@@ -68,7 +56,7 @@ img {
 }
 
 #bentos {
-    padding: 2rem 1rem;
+    padding: 0 1rem;
 
     .container {
         display: grid;
@@ -124,7 +112,7 @@ img {
 }
 
 #categories {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
 
     h2 {
         font-size: 36px;
@@ -146,21 +134,21 @@ img {
             padding: .5rem 1rem;
             box-shadow: 0 5px 8px rgba(0, 0, 0, .1);
             transition: all ease .3s;
-            
+
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            
-            img{
+
+            img {
                 max-width: 100px;
             }
-            
+
             &:hover {
                 background: var(--secondary);
             }
-            
+
             p {
                 font-size: 26px;
                 text-align: center;
@@ -171,7 +159,7 @@ img {
 }
 
 #cta {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
 
     .container {
         display: grid;
@@ -180,27 +168,27 @@ img {
         background-image: url(/img/cta-bg.png);
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 3rem 4rem;
+        padding: 3rem 2rem 3rem 0;
         border-radius: 20px;
 
         .content {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
         }
     }
 
     h2 {
-        font-size: 60px;
-
+        font-size: 3rem;
+        
         .green {
             color: var(--primary);
         }
     }
-
+    
     p {
-        font-size: 32px;
+        font-size: 1.5rem;
         opacity: .7;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -229,7 +217,7 @@ img {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         align-items: stretch;
-        gap: 2rem;
+        gap: 1.5rem;
         flex-wrap: wrap;
     }
 }

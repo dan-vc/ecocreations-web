@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Inicio')
 @section('styles')
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="stylesheet" href="/css/product-card.css">
 @endsection
@@ -127,21 +128,20 @@
                 @foreach ($productos as $producto)
                     <li class="product-card">
                         <a href="{{ url('productos/' . $producto->idproducto) }}">
-                            <img src="{{ $producto->imgproducto }}" alt="">
+                            <img src="{{ $producto->imgproducto }}"
+                                alt="Vaso">
+                            </a>
+                        <a href="{{ url('productos/' . $producto->idproducto) }}">
+                            <h3>{{ $producto->nomproducto }}</h3>
                         </a>
-                        <section class="product-card__content">
-                            <article class="product-card__content-info">
-                                <a href="{{ url('productos/' . $producto->idproducto) }}">
-                                    <h3>{{ $producto->nomproducto }}</h3>
-                                </a>
-                                <p>S/. {{ number_format($producto->preproducto, 2) }}</p>
-                            </article>
-                            <img src="icons/shopping-cart.svg" alt="Agregar al Carrito" class="add-to-cart">
-                        </section>
+                        <p>{{ $producto->desproducto }}</p>
+                        <span class="product-price">S/{{ number_format($producto->preproducto, 2) }}</span>
+                        <button class="add-to-cart-btn" wire:click="agregar({{ $producto->idproducto }})">AGREGAR AL
+                            CARRITO</button>
                     </li>
                 @endforeach
             </ul>
-            <a href="{{ url('productos') }}" class="btn btn-light">Ver más</a>
+            <a href="{{ url('productos') }}" class="btn">Ver más</a>
         </article>
     </section>
 
