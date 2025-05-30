@@ -78,6 +78,11 @@ img {
     align-items: center;
     gap: 20px;
 
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
     &.btn-light {
         background-color: var(--light);
         color: var(--dark);

@@ -2,9 +2,9 @@
     <ul class="paginacion">
         {{-- Anterior --}}
         @if ($paginator->onFirstPage())
-            <li class="disabled btn-anterior">Anterior</li>
+            <li class="disabled btn btn-light">Anterior</li>
         @else
-            <li class="btn-anterior"><a href="{{ $paginator->previousPageUrl() }}">Anterior</a></li>
+            <li class="btn btn-light"><a href="{{ $paginator->previousPageUrl() }}">Anterior</a></li>
         @endif
 
         {{-- Páginas --}}
@@ -26,9 +26,9 @@
 
         {{-- Siguiente --}}
         @if ($paginator->hasMorePages())
-            <li class="btn-siguiente"><a href="{{ $paginator->nextPageUrl() }}">Siguiente</a></li>
+            <a href="{{ $paginator->nextPageUrl() }}" class="btn btn-light">Siguiente</a>
         @else
-            <li class="disabled btn-siguiente">Siguiente</li>
+            <li class="disabled btn btn-light">Siguiente</li>
         @endif
     </ul>
 @endif
