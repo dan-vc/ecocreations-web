@@ -64,9 +64,9 @@ img {
     background-color: var(--primary);
     color: var(--light);
     border-radius: 20px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     text-decoration: none;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     font-size: 1.5rem;
     min-width: 250px;
     cursor: pointer;

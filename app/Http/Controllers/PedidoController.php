@@ -14,7 +14,7 @@ class PedidoController extends Controller
 
     public function thankyou()
     {
-        $idpedido = session()->get('idpedido'); // Obtener el ID del pedido de la sesión
+        $idpedido = session()->get('idpedido') ?? 1; // Obtener el ID del pedido de la sesión
         // $idpedido = 1; // ID DE PRUEBA
 
         $pedido = Pedido::find($idpedido); // Buscar el pedido en la base de datos

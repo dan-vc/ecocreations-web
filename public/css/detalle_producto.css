@@ -67,24 +67,11 @@
 }
 
 .block-1 .card-1-2 button {
-    width: 481px;
-    height: 57px;
-    color: white;
-    font-size: 28px;
-    background-color: #333333;
-    border-radius: 15px;
-    cursor: pointer;
-    border: none;
-}
-
-.hr {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1300px;
+    width: 100%;
 }
 
 .block-2 {
-    background: linear-gradient(to bottom, #FFFFFF 0%, #faf5cbd5 58%, #FFFFFF 97%);
+    background: linear-gradient(to bottom, var(--light) 0%, #faf5cbd5 58%, var(--light) 97%);
     padding-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -96,14 +83,12 @@
     font-size: 45px;
 }
 
-.block-2 .card-1 {
+.block-2 .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding-top: 60px;
     padding-bottom: 60px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .block-2 .card-1-1 {

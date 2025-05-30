@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Gracias por tu compra')
 @section('styles')
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/gracias.css">
 @endsection
 @section('content')
@@ -73,17 +74,21 @@
                             @foreach ($productos as $producto)
                                 <div class="order-item">
                                     <div class="item-image">
-                                        <img src="{{ $producto['info']->imgproducto }}" alt="{{ $producto['info']->nomproducto }}">
+                                        <img src="{{ $producto['info']->imgproducto }}"
+                                            alt="{{ $producto['info']->nomproducto }}">
                                     </div>
                                     <div class="item-info">
                                         <h4>{{ $producto['info']->nomproducto }}</h4>
                                         <p>{{ $producto['info']->desproducto }}</p>
                                         <div class="item-details">
                                             <span class="quantity">Cantidad: {{ $producto['cantidad'] }}</span>
-                                            <span class="price">S/{{ number_format($producto['info']->preproducto, 2) }} c/u</span>
+                                            <span class="price">S/{{ number_format($producto['info']->preproducto, 2) }}
+                                                c/u</span>
                                         </div>
                                     </div>
-                                    <div class="item-total">S/{{ number_format($producto['info']->preproducto * $producto['cantidad'], 2) }}</div>
+                                    <div class="item-total">
+                                        S/{{ number_format($producto['info']->preproducto * $producto['cantidad'], 2) }}
+                                    </div>
                                 </div>
                             @endforeach
                         </div>
@@ -181,13 +186,13 @@
 
             <!-- Botones de acción -->
             <div class="action-buttons">
-                <a class="btn btn-secondary" onclick="window.print()">
+                <a class="btn btn-light" onclick="window.print()">
                     IMPRIMIR PEDIDO
                 </a>
-                <a class="btn btn-secondary" href="{{ url('/') }}">
+                <a class="btn btn-light" href="{{ url('/') }}">
                     VOLVER AL INICIO
                 </a>
-                <a class="btn btn-secondary" href="{{ url('productos') }}">
+                <a class="btn btn-light" href="{{ url('productos') }}">
                     SEGUIR COMPRANDO
                 </a>
             </div>

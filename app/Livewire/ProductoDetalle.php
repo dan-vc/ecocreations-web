@@ -19,7 +19,7 @@ class ProductoDetalle extends Component
         // Obtiene 3 productos de la misma categoría, excluyendo el actual
         $this->productosRelacionados = Producto::where('idcategoria', $this->producto->idcategoria)
             ->where('idproducto', '!=', $this->producto->idproducto)
-            ->take(3)
+            ->take(4)
             ->get();
     }
 

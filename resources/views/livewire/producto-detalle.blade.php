@@ -16,15 +16,11 @@
             <section class="card-1-2">
                 <p class="text_1">Descripción</p>
                 <p class="text_2">{{ $producto->desproducto }}</p>
-                <button wire:click="agregarAlCarrito">
+                <button wire:click="agregarAlCarrito" class="btn">
                     Agregar al Carrito
                 </button>
             </section>
         </section>
-    </section>
-
-    <section class="hr">
-        <hr>
     </section>
 
     <section class="block-2">
@@ -32,25 +28,22 @@
             <p class="text_1">PRODUCTOS RECOMENDADOS</p>
         </section>
 
-        <section class="card-1">
-
+        <ul class="container">
             @foreach ($productosRelacionados as $producto)
-                <article class="card-1-1">
-                    <section>
-                        <img src="{{ $producto->imgproducto }}" alt="Foto desde Laravel" width="235" height="232">
-                        <p class="text_1">{{ $producto->nomproducto }}</p>
-                        <p class="text_2">{{ $producto->desproducto }}</p>
-                        <p class="text_3">S/{{ number_format($producto->preproducto, 2) }}</p>
-                        <a href="{{ url('productos/' . $producto->idproducto) }}">COMPRAR</a>
-                    </section>
-                </article>
+                <li class="product-card">
+                    <a href="{{ url('productos/' . $producto->idproducto) }}">
+                        <img src="{{ $producto->imgproducto }}" alt="Vaso">
+                    </a>
+                    <a href="{{ url('productos/' . $producto->idproducto) }}">
+                        <h3>{{ $producto->nomproducto }}</h3>
+                    </a>
+                    <p>{{ $producto->desproducto }}</p>
+                    <span class="product-price">S/{{ number_format($producto->preproducto, 2) }}</span>
+                    <button class="add-to-cart-btn" wire:click="agregar({{ $producto->idproducto }})">AGREGAR AL
+                        CARRITO</button>
+                </li>
             @endforeach
-
-        </section>
-
-        <section class="hr">
-            <hr>
-        </section>
+        </ul>
     </section>
 
     <section class="block-3">
